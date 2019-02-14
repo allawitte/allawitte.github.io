@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+.features {
+  padding: 130px 0;
+  background: url(../img/gray-panel.jpg) no-repeat top center;
+  background-size: cover;
+  text-align: center;
+  @include sm {
+    padding: 50px 0;
+  }
+  @include xs {
+    padding: 20px 0;
+  }
+}
+.features-title {
+  @include title;
+}
+.features-head {
+  @include section-head;
+  margin-bottom: 65px;
+}
+.features-subheader {
+  letter-spacing: 0.6pt;
+  word-spacing: 2pt;
+  padding: 23px 0 10px 0;
+  font-size: 21px;
+  font-weight: 500;
+}
+.features-text {
+  font-weight: 100;
+}

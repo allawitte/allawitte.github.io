@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.wrapper {
+  width: 82%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper, .row {
+  @extend %clearfix;
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+  min-height: 1px;
+  position: relative;
+}
+body {
+  font-family: 'Exo', sans-serif;
+  color: $text-color;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@media #{$breakpoint-medium} {
+  .wrapper {
+    width: 82%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}

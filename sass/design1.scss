@@ -1,0 +1,72 @@
+@import "variables";
+@import "mixins";
+
+.design1 {
+  position: relative;
+}
+
+.design1:after {
+  @include section-decor;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(45deg, #fb8686, #fb8686 37%, #ffffff 37%);
+}
+
+.design1-wrapper {
+  @include section-flex;
+  flex-direction: row-reverse;
+  position: relative;
+  z-index: 1;
+  @include sm {
+    display: block;
+  }
+  @include xs {
+    display: block;
+  }
+}
+
+.design1-picture-wrap {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  @include sm {
+    width: 100%;
+  }
+  @include xs {
+    width: 100%;
+  }
+}
+
+.design1-text {
+  width: 48%;
+  padding: 138px 0;
+  @include sm {
+    width: 100%;
+    padding: 60px 0;
+  }
+  @include xs {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+.design1-title {
+  @include title;
+}
+
+.design1-head {
+  @include section-head;
+  padding: 10px 0 30px 0;
+}
+.design1-head:after {
+  @include head-decor;
+
+}
+
+.design1-content {
+  @include text-content;
+}

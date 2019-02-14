@@ -1,0 +1,129 @@
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin section-flex {
+  display: flex;
+}
+
+@mixin title {
+  color: $title-color;
+  font-size: 12pt;
+  text-transform: uppercase;
+  letter-spacing: 2.2pt;
+}
+@mixin head-decor {
+  content: '....';
+  color:  $title-color;
+  position: absolute;
+
+}
+@mixin text-content {
+  line-height: 25px;
+  letter-spacing: 0.5pt;
+}
+@mixin section-decor {
+  content: '';
+  position: absolute;
+  width: 100%;
+  @include sm {
+    display: none;
+  }
+  @include xs {
+    display: none;
+  }
+}
+@mixin red-btn {
+  color: #fff;
+  font-size: 12pt;
+  background: $title-color;
+  text-decoration: none;
+  letter-spacing: 2pt;
+  word-spacing: 2pt;
+  border: none;
+  line-height: 3.1;
+  text-transform: uppercase;
+  @include md {
+    font-size: 10pt;
+  }
+  @include  sm {
+    font-size: 8pt;
+  }
+  @include xs {
+    font-size: 7pt;
+  }
+}
+@mixin placeholder {
+  font-size: 17px;
+  letter-spacing: -0.5pt;
+  @include xs {
+    font-size: 14px;
+  }
+}
+@mixin input {
+  height: 49px;
+  padding-left: 27px;
+  border-radius: 3px;
+
+}
+
+@mixin section-head {
+  font-weight: 500;
+  font-size: 30pt;
+  letter-spacing: 1.25pt;
+  position: relative;
+  @include sm {
+    font-size: 28px;
+  }
+  @include xs {
+    font-size: 20pt;
+  }
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm}) and (max-width: #{$md - 1}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md}) and (max-width: #{$lg - 1}){
+    @content;
+  }
+}
+
+
+@mixin lg {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (max-width: #{$sm - 1}) {
+    @content;
+  }
+}
+

@@ -1,0 +1,113 @@
+@import "variables";
+@import "mixins";
+.footer {
+  padding-top: 70px;
+  position: relative;
+  @include sm {
+    padding-top: 40px;
+  }
+  @include xs {
+    padding-top: 20px;
+  }
+}
+.footer:after {
+  @include section-decor;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: linear-gradient(223deg, $title-color, $title-color 20%, $lightest 20%,  $lightest);
+}
+.footer-subhead {
+  padding-top: 7px;
+  padding-bottom: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  @include sm {
+    font-size: 18px;
+    padding-bottom: 15px;
+  }
+  @include sm {
+    font-size: 17px;
+    padding-bottom: 10px;
+  }
+}
+.footer-text {
+  font-size: 13px;
+  @include sm {
+    display: inline;
+    margin-right: 15px;
+  }
+  @include xs {
+    display: inline;
+    margin-right: 15px;
+  }
+}
+.footer-form {
+  display: flex;
+}
+.footer-form-input {
+  @include input;
+  border: #b8b8bf;
+  background: #f6f6f6;
+}
+.footer-form-input::placeholder {
+  @include placeholder;
+  color: #b8b8bf;
+  text-transform: uppercase;
+}
+.footer-form-button {
+  background: $title-color;
+  height: 25px;
+  width: 25px;
+  padding: 12px;
+  border: none;
+  box-sizing: content-box;
+  border-radius: 3px;
+  position: relative;
+
+}
+.footer-form-button:after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  margin-top: 7px;
+  margin-left: -20px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 8px 2px #000000;
+  -moz-box-shadow: 0px 0px 8px 2px #000000;
+  box-shadow: 0px 0px 8px 2px #000000;
+}
+.footer-form-button-ico {
+  background: url(../img/social.png) no-repeat 98% 50%;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+}
+.footer-social {
+  padding-right: 16.67%;
+  margin: 10px auto 0 auto;
+  text-align: center;
+}
+.footer-social-link {
+  display: inline-block;
+  width: 20px;
+  height: 28px;
+  margin-right: 10px;
+}
+.footer-social-svg {
+  width: 20px;
+  height: 28px;
+}
+.footer-data {
+  @include sm {
+    padding: 0;
+  }
+  @include xs {
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+.feedback {
+  background: url(../img/logos-bg.jpg) no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 98px 0 0 0;
+  @include sm {
+    padding: 50px 0 0 0;
+  }
+  @include  xs {
+    padding: 20px 0 0 0;
+  }
+}
+.feedback-name {
+  color: $lightest;
+}
+.feedback-position {
+  color: $title-color;
+}
+.feedback-text {
+  color: $text-gray;
+}
+.feedback-photo {
+  width: 73px;
+}
+.feedback-name {
+  padding: 18px 0 2px 0;
+  font-size: 22px;
+  letter-spacing: 0.9pt;
+  word-spacing: -0.5pt;
+}
+.feedback-position {
+  margin-bottom: 27px;
+  color: $title-color;
+  letter-spacing: -0.3pt;
+}
+.feedback-text {
+  @include text-content;
+}
+.feedback-logos {
+  padding: 84px 0 71px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @include sm {
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  @include xs {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+}
+.feedback-logo {
+  position: relative;
+  @include sm {
+    position: static;
+  }
+  @include xs {
+    position: static;
+  }
+
+
+}
+.feedback-logo.rvlvr {
+  top: -14px;
+}
+.feedback-logo.sienna {
+  top: -19px;
+}
+.feedback-logo.igor {
+  top: -14px;
+}

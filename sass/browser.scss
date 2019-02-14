@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+$middle: 50%;
+.browser {
+  padding: 108px 0 0 0;
+  text-align: center;
+  @include sm {
+    padding: 50px 0 0 0;
+  }
+  @include xs {
+    padding: 20px 0 0 0;
+  }
+}
+.browser-title {
+  @include title
+}
+.browser-head {
+  @include section-head;
+  padding-bottom: 30px;
+}
+.browser-text {
+  @include text-content;
+  width: 50%;
+  margin: 0 auto;
+  @include sm {
+    width: 70%;
+  }
+  @include xs {
+    width: 90%;
+  }
+}
+.browser-head:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  display: block;
+  bottom: -2px;
+  left: calc(#{$middle} - 50px);
+  background: linear-gradient(50deg,#fff, #fff 20px,  $title-color 20px, $title-color 23px, #fff 23px, #fff 38px, $title-color 38px, $title-color 41px,#fff 41px, #fff 56px, $title-color 56px, $title-color 59px, #fff 59px, #fff);
+}
+.browser-img {
+  display: block;
+  margin: 103px auto 0 auto;
+  @include sm {
+    margin: 50px auto 0 auto;
+  }
+  @include xs {
+    margin: 20px auto 0 auto;
+  }
+}
